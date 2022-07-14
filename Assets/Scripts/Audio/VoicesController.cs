@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+//Note: voices removed for itch.io release
+
 public enum Character
 {
     Ash,
@@ -45,8 +47,9 @@ public class VoicesController : MonoBehaviour
 
     private void Start()
     {
-        PlayVoice(Character.Ash, Action.GameStart, gameStartDelay);
-        PlayVoice(Character.Liz, Action.GameStart, gameStartDelay + ashGameStart[0].clip.length + delayLizStart);
+        //(not used in itch.io version)
+        //PlayVoice(Character.Ash, Action.GameStart, gameStartDelay);
+        //PlayVoice(Character.Liz, Action.GameStart, gameStartDelay + ashGameStart[0].clip.length + delayLizStart);
     }
 
 

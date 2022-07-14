@@ -50,8 +50,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject PauseMenu;
 
-    [SerializeField]
-    private VoicesController voiceController;
+    //[SerializeField] (not used in itch.io version)
+    //private VoicesController voiceController;
 
 
     public static UIManager UIManagerInstance
@@ -171,8 +171,8 @@ public class UIManager : MonoBehaviour
         AshAnimator.SetTrigger("Happy");
         LizAnimator.SetTrigger("Mistake");
 
-        //play voices too
-        voiceController.PlayVoice(Character.Liz, Action.Mistake);
+        //play voices too (not used in itch.io version)
+        //voiceController.PlayVoice(Character.Liz, Action.Mistake);
     }
 
 
@@ -181,8 +181,8 @@ public class UIManager : MonoBehaviour
     {
         VictoryScreen.SetActive(true);
 
-        //play voice too
-        voiceController.PlayVoice(Character.Ash, Action.WinningGame);
+        //play voice too (not used in itch.io version)
+        //voiceController.PlayVoice(Character.Ash, Action.WinningGame);
     }
 
     //on lose
@@ -190,8 +190,8 @@ public class UIManager : MonoBehaviour
     {
         DefeatScreen.SetActive(true);
 
-        //play voice too
-        voiceController.PlayVoice(Character.Ash, Action.LosingGame);
+        //play voice too (not used in itch.io version)
+        //voiceController.PlayVoice(Character.Ash, Action.LosingGame);
     }
 
     //activate or deactivate pause menu
