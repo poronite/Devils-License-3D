@@ -9,7 +9,7 @@ public class SignSelectionUI : MonoBehaviour
     private Sprite STOP, Speed30, Speed50, StraightAhead, TurnLeft, TurnRight, None;
 
     [SerializeField]
-    private Image[] buttons = new Image[3];
+    private Button[] buttons = new Button[3];
 
     public Dictionary<int, TrafficSigns> Signs = new Dictionary<int, TrafficSigns>();
 
@@ -22,25 +22,32 @@ public class SignSelectionUI : MonoBehaviour
             switch (Signs[i])
             {
                 case TrafficSigns.StraightAheadSign:
-                    buttons[i].sprite = StraightAhead;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = StraightAhead;
                     break;
                 case TrafficSigns.TurnLeftSign:
-                    buttons[i].sprite = TurnLeft;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = TurnLeft;
                     break;
                 case TrafficSigns.TurnRightSign:
-                    buttons[i].sprite = TurnRight;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = TurnRight;
                     break;
                 case TrafficSigns.StopSign:
-                    buttons[i].sprite = STOP;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = STOP;
                     break;
                 case TrafficSigns.VelocityLimitSign30:
-                    buttons[i].sprite = Speed30;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = Speed30;
                     break;
                 case TrafficSigns.VelocitySign50:
-                    buttons[i].sprite = Speed50;
+                    buttons[i].interactable = true;
+                    buttons[i].image.sprite = Speed50;
                     break;
                 case TrafficSigns.None:
-                    buttons[i].sprite = None;
+                    buttons[i].interactable = false;
+                    buttons[i].image.sprite = None;
                     break;
                 default:
                     break;
